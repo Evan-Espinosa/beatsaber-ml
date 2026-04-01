@@ -1,13 +1,14 @@
 # Phase 1 Implementation Checklist
-## MVP: Weeks 1-4
+## MVP: Weeks 1-4 
+# (Checklist & planned schedule to keep myself on track)
 
 **Goal:** Generate playable Beat Saber levels from audio
 
 **Success Criteria:**
-- ✅ Parse and preprocess 1000+ maps
-- ✅ Train working generator model
-- ✅ Generate at least one playable map
-- ✅ No major constraint violations
+- Parse and preprocess 1000+ maps
+- Train working generator model
+- Generate at least one playable map
+- No major constraint violations
 
 ---
 
@@ -175,7 +176,7 @@ File: `src/data/features.py`
 ```python
 import librosa
 import numpy as np
-# NOTE: Check if this function is correct
+
 class AudioFeatureExtractor:
     def __init__(self, sr=44100, n_mels=128, hop_length=512, context_frames=5):
         self.sr = sr
@@ -737,10 +738,10 @@ def generate_map(model, audio_path, difficulty, output_dir,
 ## Week 4 Checkpoint
 
 **Success criteria:**
-- ✅ Model trained for 50 epochs
-- ✅ Generated at least 1 playable map
-- ✅ No major constraint violations
-- ✅ Documented issues for Phase 2
+- Model trained for 50 epochs
+- Generated at least 1 playable map
+- No major constraint violations
+- Documented issues for Phase 2
 
 **Deliverables:**
 - Trained model checkpoint
@@ -761,7 +762,7 @@ def generate_map(model, audio_path, difficulty, output_dir,
 
 ---
 
-## Troubleshooting Guide
+## Troubleshooting Guide for anyone reading this:
 
 ### Common Issues
 
@@ -793,51 +794,4 @@ def generate_map(model, audio_path, difficulty, output_dir,
 - Verify librosa version
 - Add clipping to prevent inf values
 
----
-
-## Tips for Success
-
-**1. Start small, scale up**
-- Test everything on 10 maps first
-- Then 100, then 1000+
-- Catch bugs early
-
-**2. Visualize everything**
-- Plot spectrograms
-- Visualize token sequences
-- Check event distributions
-
-**3. Save often**
-- Checkpoint every 10 epochs
-- Save preprocessed data
-- Keep notes of what works
-
-**4. Use Claude Code**
-- Ask for help implementing specific functions
-- Debug issues together
-- Iterate on working code
-
-**5. Document issues**
-- Note what's not working
-- Ideas for Phase 2
-- Metrics to track
-
----
-
-## Next Steps After Phase 1
-
-If Phase 1 successful:
-1. Review generated maps (identify patterns in failures)
-2. Collect feedback from playtesting
-3. Plan Phase 2 improvements (quality scorer)
-4. Expand dataset with tiered thresholds
-
-If Phase 1 struggling:
-1. Debug thoroughly (don't rush to Phase 2)
-2. Simplify if needed (smaller model, less data)
-3. Ask for help (Discord, Claude Code)
-4. Iterate until basics work
-
----
-
-**Ready to begin? Start with Week 1, Day 1!** 🚀
+**Implementation begins with the Data Pipeline Foundation phase.**
