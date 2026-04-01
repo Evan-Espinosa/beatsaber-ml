@@ -1,6 +1,5 @@
 # Phase 1 Implementation Checklist
 ## MVP: Weeks 1-4 
-# (Checklist & planned schedule to keep myself on track)
 
 **Goal:** Generate playable Beat Saber levels from audio
 
